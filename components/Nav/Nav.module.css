@@ -1,31 +1,5 @@
 /* Nav styles */
-
-.navContainer{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 5vh;
-  color:white;
-  text-decoration: none;
-  font-size: large;
-  margin: 10px;
-}
-
-
-.navLinks{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  width: 90%;
-  list-style: none;
-  text-decoration: none;
-}
-
 .item{
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 800;
-  line-height: 1.5;
-  color: black;
-  margin: 2rem;
 }

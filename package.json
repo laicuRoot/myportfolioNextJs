@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
@@ -14,6 +14,9 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "file-loader": "^6.1.0"
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "file-loader": "^6.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.8.8"
   }
 }
