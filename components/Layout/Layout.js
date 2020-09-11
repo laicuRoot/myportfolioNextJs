@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
       {home ? (
         <>
           <section className={styles.avatarContainer}>
-            <img src="../../images/profile.png" alt="avatar" />
+            <img className={styles.avatar} src="../../images/profile.png" alt="avatar" />
           </section>
 
           <section className={styles.cardContainer}>

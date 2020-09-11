@@ -17,20 +17,19 @@
 
 .avatar{
   margin: 2rem; 
-  height: 35vh;
-  width: 35vh;
+  height: 30vh;
+  width: 30vh;
 }
 
 .cardContainer{
   display: flex;
   align-self: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 60%;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  opacity: 0.7;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
   border-radius: 1rem;
 }
 
@@ -62,13 +61,12 @@
 .skillsContainer{
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 60%;
   align-items: center;
   justify-content: center;
   align-self: center;
-  background-color: black;
-  opacity: 0.7;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
   list-style-type: none;
   padding-inline-start: 0px;
 }
