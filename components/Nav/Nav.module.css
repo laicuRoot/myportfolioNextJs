@@ -1,0 +1,27 @@
+/* Nav styles */
+
+.navContainer{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  color:white;
+  text-decoration: none;
+  font-size: large;
+  margin: 10px;
+}
+
+
+.navLinks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 90%;
+  list-style: none;
+  text-decoration: none;
+}
+
+.item{
+  margin: 2rem;
+}
