@@ -9,6 +9,7 @@ export default function Home() {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="og:title" content={siteTitle} />
       </Head>
     </Layout>
   );

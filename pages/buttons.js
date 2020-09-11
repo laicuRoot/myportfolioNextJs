@@ -3,20 +3,20 @@
 const navButtons = [
   {
     label: "Resume",
-    path: "/resume",
+    path: "/Resume",
   },
   {
     label: "Project",
-    path: "/projects",
+    path: "/Projects",
   },
   {
     label: "About Me",
-    path: "/aboutme",
+    path: "/AboutMe",
   },
   {
     label: "Contact",
-    path: "/contact",
-  }
+    path: "/ContactMe",
+  },
 ];
 
 export default navButtons;
