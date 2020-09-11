@@ -1,15 +1,15 @@
 import Head from 'next/head';
-import Nav from '../components/Nav/Nav';
-import Layout from '../components/Layout/Layout';
+import Link from 'next/link';
+import Layout, {siteTitle} from '../components/Layout/Layout';
+import utilStyles from '../styles/utils.module.css';
+
 
 export default function Home() {
   return (
-    <>
+    <Layout home>
       <Head>
-        <title>Jose Blanco Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-      <Layout />
-      </>
-  )
+    </Layout>
+  );
 }
