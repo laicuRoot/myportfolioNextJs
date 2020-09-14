@@ -6,7 +6,7 @@ const navButtons = [
     path: "/Resume",
   },
   {
-    label: "Project",
+    label: "Projects",
     path: "/Projects",
   },
   {
