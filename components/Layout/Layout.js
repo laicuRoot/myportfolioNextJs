@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
               <hr />
 
               <section className='container mx-auto'>
-                <div className='mb-4 text-lg leading-tight text-left px-4 py-2 m-2 h-40'>
+                <div className='mb-4 text-left px-4 py-2 m-2'>
                   <p className='text-4xl'> Hello I'm Jose Blanco and I'm self-tough front-end developer</p>
                 </div>
               </section>
