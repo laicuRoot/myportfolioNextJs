@@ -1,13 +1,12 @@
-
-
-/* Main container styles
-
-.mainContainer{
+/* .mainContainer{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-}
+} */
+
+/* Main container styles
+
 
 .avatarContainer{
   display: flex;
