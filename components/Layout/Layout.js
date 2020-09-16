@@ -18,7 +18,7 @@ export default function Layout({ children, home }) {
           <hr />
             <main>
                 <div className='flex flex-col items-start px-5 mx-auto w-full'>
-                  <div className='mt-40'>
+                  <div className='mt-40 m-10'>
                 <motion.div initial="hidden" animate="visible" variants={{
                   hidden: {
                     scale: .5,

@@ -50,3 +50,25 @@
 .lightText {
   color: #999;
 }
+
+.card{
+  position: relative;
+  padding: 25px;
+  height: 460px;
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.card:nth-child(4n + 1),
+.card:nth-child(4n + 4) {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.card:nth-child(odd) {
+  padding-left: 0;
+}
+
+.card:nth-child(even) {
+  padding-right: 0;
+}
