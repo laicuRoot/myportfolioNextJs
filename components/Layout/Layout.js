@@ -28,7 +28,8 @@ export default function Layout({ children, home }) {
                     scale: 1,
                     opacity: 1,
                     transition: {
-                      delay: .7
+                      delay: 0.5,
+                      duration:0.5
                     }
                   },
                 }}>
@@ -47,6 +48,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
+            <hr />
             {children}
           </>
         )}

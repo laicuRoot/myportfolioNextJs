@@ -1,32 +1,35 @@
 import Head from 'next/head';
+import Link from 'next/link'
 import projects from '../projects';
 import { motion } from 'framer-motion';
 import styles from '../styles/utils.module.css'
 
 const Card = (props) =>{
   return (
-    <motion.div
-      className={`rounded-lg text-center ${styles.card} bg-cover bg-center`}
-      style={{ backgroundImage: `url(${props.photo})`}}
-      whileHover={{
-        position: "relative",
-        zIndex: 1,
-        background: "orange",
-        scale: 1.1,
-        transition: {
-          duration: 0.2,
-        },
-      }}
-    >
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
-    </motion.div>
+    <Link href={props.link}>
+      <motion.div
+        className={`rounded-lg text-center ${styles.card} bg-cover bg-center cursor-pointer`}
+        style={{ backgroundImage: `url(${props.photo})` }}
+        whileHover={{
+          position: 'relative',
+          top: 0,
+          scale: 1.1,
+          zIndex: 10,
+          transition: {
+            duration: 0.7,
+          }
+        }}
+      >
+        <h1 className='text-white text-center text-4xl bg-fixed rounded w-full m-0'>{props.title}</h1>
+        <p className='text-white text-center text-xl'>{props.description}</p>
+      </motion.div>
+    </Link>
   );
 }
 
 const ProjectList = () =>{
   return (
-    <div className="flex flex-wrap p-4 w-3/4 h-auto justify-items-center mx-auto">
+    <div className="flex p-4 flex-wrap w-full h-auto justify-center mx-auto space-x-1 space-y-2">
       {projects.map((project, id) => {
         return (
           <Card
@@ -34,6 +37,7 @@ const ProjectList = () =>{
             title={project.title}
             description={project.description}
             photo={project.photo}
+            link={project.link}
           />
         );
       })}

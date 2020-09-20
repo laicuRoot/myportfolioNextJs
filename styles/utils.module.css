@@ -53,16 +53,16 @@
 
 .card{
   position: relative;
-  padding: 25px;
-  height: 360px;
+  padding: 15px;
+  height: 300px;
   flex: 0 0 60%;
   max-width: 60%;
 }
 
 .card:nth-child(4n + 1),
 .card:nth-child(4n + 4) {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 30%;
+  max-width: 30%;
 }
 
 .card:nth-child(odd) {
@@ -70,5 +70,5 @@
 }
 
 .card:nth-child(even) {
-  padding-right: 0;
+  padding-right: 1rem;
 }
