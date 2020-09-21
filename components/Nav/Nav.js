@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import styles from './Nav.module.css';
 import { motion } from "framer-motion";
 import navButtons from '../../buttons';
 
@@ -18,7 +17,7 @@ export default function Nav(){
           <span className='font-semibold text-xl tracking-tight'>Jose Blanco</span>
         </Link>
       </div>
-      <div className='flex justify-end w-full block lg:flex lg:items-center lg:w-auto space-x-4'>
+      <div className='flex justify-end w-full lg:flex lg:items-center lg:w-auto space-x-4'>
           {navButtons.map((button,id) => {
             return (
               <NavButton key={id} path={button.path} label={button.label} />

@@ -4,13 +4,16 @@
 
 @import "tailwindcss/utilities";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+
 body {
   background: #12c2e9;  /* fallback for old browsers */
   background: white;
-  font-family: 'Noto Sans', sans-serif;
 }
 
 *, :after, :before {
     box-sizing: border-box;
     border: 0 solid #e2e8f0;
+    font-family: 'Noto Sans', sans-serif;
 }

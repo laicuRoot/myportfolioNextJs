@@ -11,8 +11,9 @@ export default function Layout({ children, home }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.icon" />
-        <meta name="og:title" content={siteTitle} />
+        <meta name={siteTitle} content={siteTitle} />
       </Head>
+      
         {home ? (
           <>
           <hr />
