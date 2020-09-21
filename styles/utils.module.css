@@ -56,19 +56,11 @@
   padding: 15px;
   height: 300px;
   flex: 0 0 60%;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .card:nth-child(4n + 1),
 .card:nth-child(4n + 4) {
-  flex: 0 0 30%;
+  flex: 0 0 40%;
   max-width: 30%;
-}
-
-.card:nth-child(odd) {
-  padding-left: 1rem;
-}
-
-.card:nth-child(even) {
-  padding-right: 1rem;
 }

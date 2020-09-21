@@ -8,20 +8,24 @@ const Card = (props) =>{
   return (
     <Link href={props.link}>
       <motion.div
-        className={`rounded-lg text-center ${styles.card} bg-cover bg-center cursor-pointer`}
+        className={`rounded-lg text-center ${styles.card} bg-no-repeat bg-cover bg-center cursor-pointer`}
         style={{ backgroundImage: `url(${props.photo})` }}
         whileHover={{
-          position: 'relative',
+          position: "relative",
           top: 0,
           scale: 1.1,
           zIndex: 10,
           transition: {
             duration: 0.7,
-          }
+          },
         }}
       >
-        <h1 className='text-white text-center text-4xl bg-fixed rounded w-full m-0'>{props.title}</h1>
-        <p className='text-white text-center text-xl'>{props.description}</p>
+        <h1 className="text-white text-center text-4xl bg-black bg-opacity-50 bg-fixed rounded w-full m-0">
+          {props.title}
+        </h1>
+        <p className="text-white text-center text-2xl bg-black bg-opacity-50">
+          {props.description}
+        </p>
       </motion.div>
     </Link>
   );
