@@ -3,25 +3,25 @@ const projects = [
   {
     title: "Weather App React",
     photo: '/images/weatherblack.jpeg',
-    description: 'React Web Application using Openweather, Unsplash, and News API',
+    description: 'Weather & News app using React and React Router',
     link:'https://github.com/laicuRoot/Weather-App-React'
   },
   {
     title: "Yealp App React",
     photo: "/images/yelpsmall.jpg",
-    description: 'First project using React and fetching data from Yelp API following Codecademy guide',
+    description: 'Find your favourite restaurant. Built with React and Yelp API',
     link: 'https://github.com/laicuRoot/Weather-App-React'
   },
   {
     title: "Jamming App React",
     photo: "/images/spotifyblack.jpg",
-    description: 'Spotify API React Project',
+    description: 'Spotify App using React',
     link: 'https://github.com/laicuRoot/Weather-App-React'
   },
   {
     title: "Travel App Website",
     photo: "/images/travelblack.jpeg",
-    description: 'WebApp that retrieve the data from the 3 different API\'s',
+    description: 'WebApp using data from 3 API\'s',
     link: 'https://github.com/laicuRoot/Weather-App-React'
   }
 ];

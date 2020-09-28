@@ -13,7 +13,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.icon" />
         <meta name={siteTitle} content={siteTitle} />
       </Head>
-      
+
         {home ? (
           <>
           <hr />
@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
                     <h1 className='text-5xl font-bold tracking-tighter leading-tight md:pr-8'> Hello I'm <span className='bg-black text-white m-1 p-2 rounded'>Jose Blanco</span> </h1>
                   </motion.div>
                     <h4 className='text-6xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8'> Front End Developer.</h4>
-                    <p className='text-xl font-medium p-1 mt-1 mb-1 w-1/2'> I'm a self-taught junior front-end developer with passion for web development and programming.</p>
+                    <p className='text-xl font-medium p-1 mt-1 mb-1 w-1/2'> I'm a self-taught front-end developer with passion for web development and programming.</p>
                     <div className='flex items-center w-40'>
                       <Link href='/Resume'>
                         <button className='bg-black text-white rounded-full py-2 px-4 animate-pulse'>Find out more</button>
