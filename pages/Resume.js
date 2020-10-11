@@ -1,26 +1,26 @@
 import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
 import React from 'react';
-import {useState} from 'react';
-import ProgressBar from '../components/Progressbar/ProgressBar';
+// import ProgressBar from '../components/Progressbar/ProgressBar';
+import styles from '../styles/utils.module.css';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
 import StarIcon from '@material-ui/icons/Star';
-
+import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
 
 
 
 export default function FirstPost() {
-  const [isVisible, setVisible] = useState(false);
 
-  const testData = [
-    { bgcolor: "#6a1b9a", completed: 100, icon:'fab fa-html5 fa-2x' },
-    { bgcolor: "#00695c", completed: 100, icon: 'fab fa-css3-alt fa-2x'},
-    { bgcolor: "#ef6c00", completed: 90, icon: 'fab fa-js-square fa-2x' },
-    { bgcolor: "#ef6c00", completed: 70, icon: 'fab fa-react fa-2x'}
-  ];
+  // const testData = [
+  //   { bgcolor: "#6a1b9a", completed: 100, icon:'fab fa-html5 fa-2x' },
+  //   { bgcolor: "#00695c", completed: 100, icon: 'fab fa-css3-alt fa-2x'},
+  //   { bgcolor: "#ef6c00", completed: 90, icon: 'fab fa-js-square fa-2x' },
+  //   { bgcolor: "#ef6c00", completed: 70, icon: 'fab fa-react fa-2x'}
+  // ];
 
   return (
     <>
@@ -30,43 +30,74 @@ export default function FirstPost() {
 
       <Layout>
         <div className='container mx-auto'>
-
-          {isVisible ? (
-
-            <div className='flex flex-wrap flex-row mt-5 mx-3'>
-              <div className='flex flex-row w-full justify-start'>
-
-                <div className='w-1/2 m-5'>
-                  <h1> Jose Blanco </h1>
-                  <h4> Front End Developer </h4>
-                  <p>I am a motivated, ambitious, dedicated and enthusiastic individual who can work alone or as part of a team with more than 8 years of account management and business development experience. Able to take initiative, plan efficiently, and think out of the box in order to meet deadlines, and reach company targets. Willing to collaborate on projects to achieve common goals.</p>
-                </div>
-
-                <div className='w-1/2 m-5'>
-                  <h1>My skills: </h1>
-                  <div className='flex flex-col'>
-                    {testData.map((item, idx) => (
-                      <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} icon={item.icon} style={item.style} />
-                    ))}
-                </div>
-
-              </div>
+            <div className='block mt-5 mx-3'>
+              <h1 className='text-5xl font-bold text-center text-gray-800'> About me </h1>
+              <p className='text-lg text-left p-5'>I am a motivated, ambitious, dedicated and enthusiastic individual who can work alone or as part of a team with more than 8 years of account management and business development experience. Able to take initiative, plan efficiently, and think out of the box in order to meet deadlines, and reach company targets. Willing to collaborate on projects to achieve common goals.</p>
             </div>
-              <VerticalTimeline>
+            {/* <div className=' m-5'>
+              <h1>My skills: </h1>
+              <div className='flex flex-col'>
+                {testData.map((item, idx) => (
+                  <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} icon={item.icon} style={item.style} />
+                ))}
+              </div> */}
+              <div className='block mt-5 mx-3 text-center'>
+                <h1 className='text-5xl font-bold text-center text-gray-800'>Work Experience & Education</h1>
+              </div>
+              <VerticalTimeline className={`${styles.verticalcustomeline}`}>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
-                  contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                  contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                  date="2011 - present"
-                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  contentStyle={{ color: 'black' }}
+                  contentArrowStyle={{ borderRight: '15px solid rgba(74, 85, 104)' }}
+                  date="March 2018 - present"
+                  position={'left'}
+                  iconStyle={{ background: 'black', color: '#fff' }}
                   icon={<WorkIcon />}
                 >
-                  <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                  <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                  <p>
-                    Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
+                  <h3 className="text-2xl">Market manager</h3>
+                  <h4 className="text-xl">London, UK</h4>
+                  <img src='https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Expedia_Group_logo.svg/1280px-Expedia_Group_logo.svg.png' alt='logo' />
+                  <p>Helping Expedia to develop and maintain a high quality portfolio of partners and property products including strategic partnerships with large groups like IHG, Melia or Hilton. Helping partners to maximise the produc&on potential by using data insights, marketing, distribution and revenue management toolset.</p>
                 </VerticalTimelineElement>
+
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--education"
+                  contentStyle={{ color: 'black' }}
+                  contentArrowStyle={{ borderRight: '15px solid rgba(74, 85, 104)' }}
+                  date="Oct 2019 - January 2020"
+                  position={'right'}
+                  iconStyle={{ background: 'black', color: '#fff' }}
+                  icon={<SchoolIcon />}
+                >
+                  <h3 className="text-2xl m-1">Frontend Development - Udacity</h3>
+                  <h4 className="text-xl m-1">Nanodegree</h4>
+                  <Chip label={'HTML'} />
+                  <Chip label={'CSS'} />
+                  <Chip label={'JAVASCRIPT'} />
+                  <Chip label={'NODE JS'} />
+                  <Chip label={'WEBPACK'} />
+                  <Chip label={'EXPRESS JS'} />
+                  <img src='https://lh3.googleusercontent.com/proxy/dbjMLg6q8peINZ5IVPp5zjnkPDWC3EPF8yaJ55ubdoKzg_VtypmPCid-811gIzZ68zGSlDkK7W6BtNlM3tm1pzgvF9YZ4ZWEHjbz7mfTtbgussxB3j7UMTI2-Gi_' alt='logo' />
+                </VerticalTimelineElement>
+
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--education"
+                  contentStyle={{ color: 'black' }}
+                  contentArrowStyle={{ borderRight: '15px solid rgba(74, 85, 104)' }}
+                  date="June 2019 - September 2019"
+                  position={'left'}
+                  iconStyle={{ background: 'black', color: '#fff' }}
+                  icon={<SchoolIcon />}
+                >
+                  <h3 className="text-2xl m-1">Introduction to Programming - Udacity</h3>
+                  <h4 className="text-xl m-1">Nanodegree</h4>
+                  <Chip label={'HTML'}/>
+                  <Chip label={'CSS'} />
+                  <Chip label={'JAVASCRIPT'} />
+                  <Chip label={'PYTHON'} />
+                  <img src='https://lh3.googleusercontent.com/proxy/dbjMLg6q8peINZ5IVPp5zjnkPDWC3EPF8yaJ55ubdoKzg_VtypmPCid-811gIzZ68zGSlDkK7W6BtNlM3tm1pzgvF9YZ4ZWEHjbz7mfTtbgussxB3j7UMTI2-Gi_' alt='logo' />
+                </VerticalTimelineElement>
+
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
                   date="2010 - 2011"
@@ -77,7 +108,7 @@ export default function FirstPost() {
                   <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
                   <p>
                     Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-    </p>
+                  </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
@@ -89,7 +120,7 @@ export default function FirstPost() {
                   <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
                   <p>
                     User Experience, Visual Design
-    </p>
+                  </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
@@ -101,7 +132,7 @@ export default function FirstPost() {
                   <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
                   <p>
                     User Experience, Visual Design
-    </p>
+                </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--education"
@@ -113,7 +144,7 @@ export default function FirstPost() {
                   <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
                   <p>
                     Strategy, Social Media
-    </p>
+                </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--education"
@@ -125,7 +156,7 @@ export default function FirstPost() {
                   <h4 className="vertical-timeline-element-subtitle">Certification</h4>
                   <p>
                     Creative Direction, User Experience, Visual Design
-    </p>
+                </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--education"
@@ -137,7 +168,7 @@ export default function FirstPost() {
                   <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
                   <p>
                     Creative Direction, Visual Design
-    </p>
+                </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
@@ -147,27 +178,6 @@ export default function FirstPost() {
             
           </div>
 
-              ) : (
-                <>
-                <div className='flex flex-row'>
-                  <div className='w-1/2 mx-3 flex flex-col h-screen justify-center items-center'>
-                    <h1 className='text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8'> Front End Developer </h1>
-                    <button
-                      className='rounded-full bg-gray-600 text-xl p-4'
-                      onClick={() => setVisible(true)}
-                    >Click here to see my journey</button>
-                  </div>
-
-                  <div className='flex h-screen justify-center items-center w-1/2 mx-3'>
-                    <h3 className='text-3xl'>My Learning Journey</h3>
-                  </div>
-                </div>
-                </>
-                )
-
-              }
-
-        </div>
       </Layout>
       </>
   );
