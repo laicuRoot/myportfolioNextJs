@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-// import styles from './Layout.module.css';
-// import utilStyles from '../../styles/utils.module.css';
 
 export const siteTitle = 'Jose Blanco Portfolio'
 
