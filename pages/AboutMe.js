@@ -1,110 +1,29 @@
 import React from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import styles from '../styles/utils.module.css'
-import WorkIcon from '@material-ui/icons/Work';
-import SchoolIcon from '@material-ui/icons/School';
-import StarIcon from '@material-ui/icons/Star';
-import { blueGrey } from '@material-ui/core/colors';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = () => {
 
     return (
-        <VerticalTimeline 
-            className={`${styles.verticalcustomeline}`}>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{color: blueGrey}}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 400)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-        >
-            <h3 className="vertical-timeline-element-title text-purple-600">Creative Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-            <img src='https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Expedia_Group_logo.svg/1280px-Expedia_Group_logo.svg.png' alt='logo' />
-            <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-            <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2008 - 2010"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-            <p>
-            User Experience, Visual Design
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2006 - 2008"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-            <p>
-            User Experience, Visual Design
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="April 2013"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<SchoolIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-            <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-            <p>
-            Strategy, Social Media
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="November 2012"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<SchoolIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-            <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-            <p>
-            Creative Direction, User Experience, Visual Design
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2002 - 2006"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<SchoolIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-            <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-            <p>
-            Creative Direction, Visual Design
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-            icon={<StarIcon />}
-        />
-        </VerticalTimeline>
-
+        <div className='lg:container lg:mx-auto'>
+            <div className='flex m-10 shadow-lg'>
+                <div className='w-1/3'>
+                    <h1 className='text-4xl font-bold text-gray-800 m-1 mb-10 p-1'>Jose Blanco</h1>
+                    <p className=' text-lg text-gray-800 m-1 mb-10 p-1'> Jose Blanco has 2 years of experience as Frontend Developer. He has extensive knowledge of HTML5, CSS, JavaScript ES6, and browser APIs as well as significant experience with popular frameworks and librarys like React, NextJS, or Framer </p>
+                    <ul className='inline-flex mt-10 m-1 p-1'>
+                        <a href='https://github.com/laicuRoot'><FontAwesomeIcon className='m-1 p-1' icon={['fab', 'github']} size='3x' /></a>
+                        <FontAwesomeIcon className='p-1 m-1' icon={['fab', 'linkedin']} size='3x' />
+                        <FontAwesomeIcon className='p-1 m-1' icon={['fa', 'envelope']} size='3x' />
+                        <FontAwesomeIcon className='p-1 m-1' icon={['fa', 'globe']} size='3x' />
+                    </ul>
+                    <p><span className='text-xl font-bold text-gray-800 m-1 p-1'>Frontend Developer</span></p>
+                    <p><span className='text-xl font-bold text-gray-800 m-1 p-1'> London, United Kingdom</span></p>
+                    <p><span className='text-lg font-bold text-green-400 m-1 p-1'>jdblancoes@gmail.com</span></p>
+                </div>
+                <div className='w-2/3 p-4'>
+                    <img src='images/japanprofile.jpeg' />
+                </div>
+            </div>
+        </div>
     )
 }
 
