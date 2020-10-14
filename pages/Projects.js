@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link'
 import projects from '../projects';
 import { motion } from 'framer-motion';
-import styles from '../styles/utils.module.css'
+import styles from '../styles/utils.module.css';
 
 const Card = (props) =>{
   return (
