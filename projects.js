@@ -14,13 +14,13 @@ const projects = [
   },
   {
     title: "Jamming App React",
-    photo: "/images/spotifyblack.jpg",
+    photo: "/images/spotify.png",
     description: 'Spotify App using React',
     link: 'https://github.com/laicuRoot/Weather-App-React'
   },
   {
     title: "Travel App Website",
-    photo: "/images/travelblack.jpeg",
+    photo: "/images/travel.png",
     description: 'WebApp using data from 3 API\'s',
     link: 'https://github.com/laicuRoot/Weather-App-React'
   }

@@ -1,62 +1,55 @@
-import Head from 'next/head';
-import Link from 'next/link'
+import Layout from '../components/Layout/Layout'
 import projects from '../projects';
-import { motion } from 'framer-motion';
-import styles from '../styles/utils.module.css';
+import Card from '../components/Card/Card';
+import { makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import { GridListTileBar } from '@material-ui/core';
 
-const Card = (props) =>{
-  return (
-    <Link href={props.link}>
-      <motion.div
-        className={`rounded-lg text-center ${styles.card} bg-no-repeat bg-cover bg-center cursor-pointer`}
-        style={{ backgroundImage: `url(${props.photo})` }}
-        whileHover={{
-          position: "relative",
-          top: 0,
-          scale: 1.1,
-          zIndex: 10,
-          transition: {
-            duration: 0.7,
-          },
-        }}
-      >
-        <h1 className="text-white text-center text-4xl bg-black bg-opacity-50 bg-fixed rounded w-full m-0">
-          {props.title}
-        </h1>
-        <p className="text-white text-center text-2xl bg-black bg-opacity-50">
-          {props.description}
-        </p>
-      </motion.div>
-    </Link>
-  );
-}
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    marginTop: '-4rem',
+    backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    width: 1000,
+    height: 1000,
+  },
+}));
 
-const ProjectList = () =>{
+
+const ProjectList = (props) =>{
+  const classes = useStyles();
   return (
-    <div className="flex p-4 flex-wrap w-full h-auto justify-center mx-auto space-x-1 space-y-2">
-      {projects.map((project, id) => {
-        return (
-          <Card
-            key={id}
-            title={project.title}
-            description={project.description}
-            photo={project.photo}
-            link={project.link}
-          />
-        );
-      })}
+    <div className={classes.root}>
+      <GridList cellHeight={300} spacing={20} className={classes.gridList}>
+        <GridListTile key="Subheader" cols={4} style={{ height: 'auto' }}>
+          <ListSubheader component="div"></ListSubheader>
+        </GridListTile>
+        {props.projects.map((project, id) => {
+          return (
+              <GridListTile key={id}>
+                <img src={project.photo}/>
+                <GridListTileBar 
+                  title={project.title}
+                />
+              </GridListTile>
+          );
+        })}
+      </GridList>
     </div>
   );
 }
 
-export default function Project(id){
+export default function Project(){
   return (
-    <>
-      <Head>
-        <title>Jose Blanco Projects</title>
-      </Head>
-      <hr />
-      <ProjectList key={id} />
-    </>
+    <Layout>
+      <ProjectList projects={projects} />
+    </Layout>
   );
 }
