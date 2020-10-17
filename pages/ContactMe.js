@@ -11,7 +11,7 @@ export default function ContactMe() {
 
   return(
     <Layout>
-      <div className="container mx-auto m-5">
+      <div className="container mx-auto m-10 shadow-lg">
         <h1 className="text-6xl font-bold text-center">Contact Me</h1>
         <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-wrap justify-center -mx-3 mb-6">
@@ -95,7 +95,7 @@ export default function ContactMe() {
           </div>
 
           {errors.exampleRequired && <span>This field is required</span>}
-          <motion.div className=' block rounded-full lg:inline-block lg:mt-0 font-bold text-black hover:shadow-md' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.div className=' block rounded-full mb-4 lg:inline-block lg:mt-0 font-bold text-black hover:shadow-md' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <input className='bg-black text-white rounded-full py-2 px-4' type="submit" /></motion.div>
         </form>
       </div>
