@@ -18,9 +18,9 @@ function  TailCard ({title, photo, description,link}){
                   </div>
 
                     <div className="relative p-1 mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:flex w-full">
-                      <Link href={link}>
-                        <i className="inline"><FontAwesomeIcon icon={['fab', 'github']} size='3x' /></i>
-                      </Link>
+                      <a href='https://github.com/laicuRoot'>
+                      <FontAwesomeIcon icon={['fab', 'github']} size='3x'/>
+                      </a>
                     </div>
                 </div>
               </div>

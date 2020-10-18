@@ -25,8 +25,12 @@ export default function FirstPost() {
 
       <Layout>
         <div className='container mx-auto'>
-            <div className='block mt-5 mx-3'>
-              My Resume
+            <div className='inline-flex m-1 justify-evenly w-full'>
+              <span className='m-1'>React</span>
+              <span className='m-1'>NextJS</span>
+              <span className='m-1'>HTML</span>
+              <span className='m-1'>CSS</span>
+              <span className='m-1'>TailWind CSS</span>
             </div>
           </div>
       </Layout>
