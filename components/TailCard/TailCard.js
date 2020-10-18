@@ -1,8 +1,35 @@
 import React from 'react';
+import {useState} from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+function Button({onClickFunction}) {
+
+  const handleClick = () => {
+    onClickFunction();
+  }
+  
+  return (
+    <button onClick={handleClick}>
+      Views
+    </button>
+  )
+}
+
+function Display({message}){
+  return(
+    <span>{message}</span>
+  )
+}
+
 function  TailCard ({title, photo, description,link}){
+  const [count, setCount] = useState(0)
+
+  const handlerFunction = () => {
+    let newCount = count + 1; 
+    setCount(newCount) 
+  }
+
   return(
           <div className="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
             <div className="bg-white rounded-lg overflow-hidden shadow relative">
@@ -14,11 +41,16 @@ function  TailCard ({title, photo, description,link}){
                   <div className="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
                     {description}
                   </div>
-                  <Link href={link}>
-                    <div className="relative p-1 mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                      <a className="inline" href="#"><FontAwesomeIcon icon={['fab', 'github']} size='3x' /></a>
+
+                    <div className="relative p-1 mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:flex w-full">
+                      <Link href={link}>
+                        <span onClick={handlerFunction} className="inline"><FontAwesomeIcon icon={['fab', 'github']} size='3x' /></span>
+                      </Link>
+                     <div className='inline-flex w-1/3 align-middle justify-items-center mx-auto'>
+                       <Button onClickFunction={handlerFunction} />
+                       <Display message={count} />
+                      </div>
                     </div>
-                  </Link>
                 </div>
               </div>
             </div>
