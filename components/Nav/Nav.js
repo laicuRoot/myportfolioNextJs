@@ -5,7 +5,9 @@ import navButtons from '../../buttons';
 
 const NavButton = props => (
   <Link href={props.path} replace>
-    <motion.div className=' block lg:inline-block lg:mt-0 font-bold text-black hover:shadow-md mr-2 p-1 rounded ' whileHover={{scale:1.1}} whileTap={{scale:0.8}}><span className='text-sm lg:flex-grow'>{props.label}</span></motion.div>
+    <motion.div className=' block lg:inline-block lg:mt-0 font-bold text-black hover:shadow-md mr-2 p-1 rounded ' whileHover={{scale:1.1}} whileTap={{scale:0.8}}>
+      <span className='text-sm uppercase cursor-pointer lg:flex-grow'>{props.label}</span>
+    </motion.div>
   </Link>
 );
 

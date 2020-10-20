@@ -1,10 +1,8 @@
 import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
 import React from 'react';
-// import ProgressBar from '../components/Progressbar/ProgressBar';
-import styles from '../styles/utils.module.css';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import NavResume from '../components/NavResume/NavResume';
+import Skills from '../components/Skills/Skills'
 
 
 
@@ -25,14 +23,9 @@ export default function FirstPost() {
 
       <Layout>
         <div className='container mx-auto'>
-            <div className='inline-flex m-1 justify-evenly w-full'>
-              <span className='m-1'>React</span>
-              <span className='m-1'>NextJS</span>
-              <span className='m-1'>HTML</span>
-              <span className='m-1'>CSS</span>
-              <span className='m-1'>TailWind CSS</span>
-            </div>
-          </div>
+          <NavResume />
+          <Skills/>
+        </div>
       </Layout>
       </>
   );
