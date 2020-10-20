@@ -1,9 +1,7 @@
 import React from 'react';
-import {useState} from 'react';
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function  TailCard ({title, photo, description,link}){
+function  TailCard ({title, photo, description}){
 
   return(
           <div className="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
@@ -27,7 +25,5 @@ function  TailCard ({title, photo, description,link}){
             </div>
   )
 }
-
-
 
 export default TailCard; 

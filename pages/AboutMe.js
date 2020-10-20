@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Home = () => {
+const AboutMe = () => {
 
     return (
         <div className='lg:container lg:mx-auto'>
@@ -27,5 +27,5 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default AboutMe;
 
