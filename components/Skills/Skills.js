@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function SkillCard({title, icon}){
   return(
-    <div className='flex justify-center items-center p-3 bg-black rounded-lg h-auto shadow-lg w-full m-2'>
-      <h4 className='text-center text-white text-lg m-1 w-full'>{title}</h4>
-      <span className='text-white m-1 w-full'>{icon}</span>
+    <div className="sm:w-1/4 p-2">
+      <div className=" px-6 py-8 rounded-lg shadow-lg text-center h-40">
+        <div className="mb-3 text-green-500">
+          {icon}
+        </div>
+        <h2 className="text-xl font-medium text-black">{title}</h2>
+      </div>
     </div>
   )
 }
@@ -17,27 +21,31 @@ function Skills (){
         My Skills
       </div>
 
-      <div className='container mx-auto w-full'>
-        <div className='flex w-full m-1 justify-evenly'> 
+      <div className='container mx-auto w-4/5'>
+        <div className='flex flex-col sm:flex-row'> 
           <SkillCard 
             title={'REACT'} 
-            icon={<FontAwesomeIcon icon={['fab', 'react']} 
-            size={'3x'}/>} />
+            icon={
+            <FontAwesomeIcon 
+            icon={['fab', 'react']} 
+            size={'4x'}/>} 
+            />
           <SkillCard
             title={'JS'}
             icon={<FontAwesomeIcon icon={['fab', 'js']}
-            size={'3x'} />} />
+            size={'4x'} />} />
           <SkillCard
             title={'CSS'}
             icon={<FontAwesomeIcon icon={['fab', 'css3-alt']}
-            size={'3x'} />} />
+            size={'4x'} />} />
           <SkillCard
             title={'NEXTJS'}
             icon={''}
             />
           <SkillCard
             title={'TAILWIND CSS'}
-            icon={<img src='./images/tailwindicon.png'/>} />
+            icon={''}
+            />
         </div>
       </div>
 
