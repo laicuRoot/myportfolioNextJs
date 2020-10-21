@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function SkillCard({title, icon}){
   return(
     <div className='flex justify-center items-center p-3 bg-black rounded-lg h-auto shadow-lg w-full m-2'>
-      <h4 className='text-center text-white text-lg m-1'>{title}</h4>
-      <span className='text-white m-1'>{icon}</span>
+      <h4 className='text-center text-white text-lg m-1 w-full'>{title}</h4>
+      <span className='text-white m-1 w-full'>{icon}</span>
     </div>
   )
 }
@@ -18,7 +18,7 @@ function Skills (){
       </div>
 
       <div className='container mx-auto w-full'>
-        <div className='inline-flex w-full m-1 justify-evenly'> 
+        <div className='flex w-full m-1 justify-evenly'> 
           <SkillCard 
             title={'REACT'} 
             icon={<FontAwesomeIcon icon={['fab', 'react']} 
