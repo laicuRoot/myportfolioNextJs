@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function SkillCard({title, icon}){
   return(
-    <div className='flex justify-center items-center p-3 bg-black rounded-lg h-auto shadow-lg w-auto'>
+    <div className='flex justify-center items-center p-3 bg-black rounded-lg h-auto shadow-lg w-full m-2'>
       <h4 className='text-center text-white text-lg m-1'>{title}</h4>
       <span className='text-white m-1'>{icon}</span>
     </div>
@@ -13,7 +13,7 @@ function SkillCard({title, icon}){
 function Skills (){
   return(
     <>
-      <div className='text-lg text-gray-700 uppercase ml-32'>
+      <div className='text-lg text-gray-700 uppercase ml-24'>
         My Skills
       </div>
 
@@ -30,11 +30,11 @@ function Skills (){
           <SkillCard
             title={'CSS'}
             icon={<FontAwesomeIcon icon={['fab', 'css3-alt']}
-              size={'3x'} />} />
+            size={'3x'} />} />
           <SkillCard
             title={'NEXTJS'}
-            icon={<FontAwesomeIcon icon={['fab', '']}
-              size={'3x'} />} />
+            icon={''}
+            />
           <SkillCard
             title={'TAILWIND CSS'}
             icon={<img src='./images/tailwindicon.png'/>} />
