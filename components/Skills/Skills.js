@@ -20,7 +20,6 @@ function Skills (){
       <div className='text-lg text-gray-700 uppercase ml-24'>
         My Skills
       </div>
-
       <div className='container mx-auto w-4/5'>
         <div className='flex flex-col sm:flex-row'> 
           <SkillCard 
