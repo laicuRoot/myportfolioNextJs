@@ -2,7 +2,11 @@ import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
 import React from 'react';
 import NavResume from '../components/NavResume/NavResume';
-import Skills from '../components/Skills/Skills'
+import Skills from '../components/Skills/Skills';
+import Experience from '../components/Experience/Experience';
+import Education from '../components/Education/Education';
+import experiences from '../experience';
+import education from '../education';
 
 
 
@@ -25,6 +29,8 @@ export default function FirstPost() {
         <div className='container mx-auto'>
           <NavResume />
           <Skills/>
+          <Experience experiences={experiences} />
+          <Education titulations={education}/>
         </div>
       </Layout>
       </>

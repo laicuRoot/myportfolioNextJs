@@ -23,27 +23,36 @@ function Skills (){
       <div className='container mx-auto w-4/5'>
         <div className='flex flex-col sm:flex-row'> 
           <SkillCard 
-            title={'REACT'} 
+            title={'JS'} 
             icon={
             <FontAwesomeIcon 
-            icon={['fab', 'react']} 
+            icon={['fab', 'js']} 
             size={'4x'}/>} 
             />
           <SkillCard
-            title={'JS'}
-            icon={<FontAwesomeIcon icon={['fab', 'js']}
+            title={'REACT'}
+            icon={<FontAwesomeIcon icon={['fab', 'react']}
             size={'4x'} />} />
+          <SkillCard
+            title={'HTML'}
+            icon={<FontAwesomeIcon icon={['fab', 'html5']}
+              size={'4x'} />} />
           <SkillCard
             title={'CSS'}
             icon={<FontAwesomeIcon icon={['fab', 'css3-alt']}
             size={'4x'} />} />
           <SkillCard
             title={'NEXTJS'}
-            icon={''}
+            icon={<FontAwesomeIcon icon={['fas', 'chevron-circle-right']}
+            size={'4x'}
+            />}
+            
             />
           <SkillCard
-            title={'TAILWIND CSS'}
-            icon={''}
+            title={'TAILWIND'}
+            icon={<FontAwesomeIcon icon={['fas', 'wind']}
+            size={'4x'}
+            />}
             />
         </div>
       </div>
