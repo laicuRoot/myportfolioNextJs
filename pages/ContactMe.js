@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import { useForm } from "react-hook-form";
 import Layout from '../components/Layout/Layout';
 import { motion } from "framer-motion";
-import { Axios, db, firebaseApp} from '../src/firebase/firebaseConfig'
+import { Axios, db} from '../src/firebase/firebaseConfig'
 
 export default function ContactMe() {
   const [formData, setFormData] = useState({})
@@ -18,7 +18,8 @@ export default function ContactMe() {
     event.preventDefault()
     sendEmail()
     setFormData({
-      name: '',
+      firstName: '',
+      lastName:'',
       email: '',
       message: '',
     })

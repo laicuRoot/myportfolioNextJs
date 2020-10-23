@@ -14,8 +14,8 @@ let config = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 }
 
-const firebaseApp = !firebase.apps.length ? firebase.initializeApp(config) : firebase.app();
+firebase.initializeApp(config)
 
 const db = firebase.firestore()
 
-export {db, Axios, firebaseApp}
+export { Axios, db }
