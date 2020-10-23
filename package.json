@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.20.0",
     "firebase": "^7.24.0",
-    "framer-motion": "^2.6.13",
+    "framer-motion": "^2.9.4",
     "moment": "^2.29.1",
     "next": "^9.5.5",
     "node-sass": "^4.14.1",
@@ -27,6 +27,6 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "file-loader": "^6.1.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.8.8"
+    "tailwindcss": "^1.9.6"
   }
 }
