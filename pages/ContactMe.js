@@ -1,19 +1,54 @@
-import React from "react";
+import React , {useState} from "react";
 import { useForm } from "react-hook-form";
 import Layout from '../components/Layout/Layout';
 import { motion } from "framer-motion";
+import { Axios, db, firebaseApp} from '../src/firebase/firebaseConfig'
 
 export default function ContactMe() {
-  const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = data => console.log(data);
+  const [formData, setFormData] = useState({})
 
-  console.log(watch("First Name")); // watch input value by passing the name of it
+  const updateInput = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    sendEmail()
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    })
+  };
+
+  const sendEmail = () => {
+    Axios.post(
+      'https://us-central1-nextjsportfoliowebsite.cloudfunctions.net/submit',
+      formData
+    )
+      .then(res => {
+        db.collection('emails').add({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          message: formData.message,
+          time: new Date(),
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+// watch input value by passing the name of it
 
   return(
     <Layout>
       <div className="container mx-auto m-10 shadow-lg">
         <h1 className="text-6xl font-bold text-center">Contact Me</h1>
-        <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit}>
           <div className="flex flex-wrap justify-center -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label className='block uppercase tracking-wide text-black text-xs font-bold mb-2' htmlFor='grid-first-name'>
@@ -25,11 +60,9 @@ export default function ContactMe() {
                 type="text"
                 placeholder="First Name"
                 name="firstName"
-                ref={register({
-                  required: true
-                })}
+                value={formData.firstName || ''}
+                onChange={updateInput}
               />
-              {errors.firstName && <p className='text-red-500 m-1'>First Name is required</p>}
             </div>
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label className='block uppercase tracking-wide text-black text-xs font-bold mb-2' htmlFor='grid-last-name'>
@@ -41,11 +74,9 @@ export default function ContactMe() {
                 type="text"
                 placeholder="Last Name"
                 name="lastName"
-                ref={register({
-                  required:true
-                })}
+                value={formData.lastName || ''}
+                onChange={updateInput}
               />
-              {errors.lastName && <p className='text-red-500 m-1'>Last Name is required</p>}
             </div>
           </div>
 
@@ -63,11 +94,9 @@ export default function ContactMe() {
                 type="email"
                 placeholder="Your Email"
                 name="email"
-                ref={register({ 
-                  required: true 
-                  })}
+                value={formData.email || ''}
+                onChange={updateInput}
               />
-              {errors.email && <p className='text-red-500 m-1'>Email is required</p>}
             </div>
           </div>
 
@@ -81,20 +110,18 @@ export default function ContactMe() {
                 </label>
               <textarea
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                name='text area'
+                name='message'
                 id="grid-textarea"
                 rows='10'
                 cols='30'
-                type="text"
+                type="message"
                 placeholder="Go ahead, contact me if you have a project in mind!"
-                ref={register({
-                  required: true
-                })}
+                value={formData.message || ''}
+                onChange={updateInput}
               />
             </div>
           </div>
 
-          {errors.exampleRequired && <span>This field is required</span>}
           <motion.div className=' block rounded-full mb-4 lg:inline-block lg:mt-0 font-bold text-black hover:shadow-md' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <input className='bg-black text-white rounded-full py-2 px-4' type="submit" /></motion.div>
         </form>
