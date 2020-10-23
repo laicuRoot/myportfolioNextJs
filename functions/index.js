@@ -1,4 +1,4 @@
-const functions = require('firebase-functions');
+import { config, https } from 'firebase-functions';
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -7,14 +7,14 @@ const functions = require('firebase-functions');
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
-const nodemailer = require('nodemailer')
+import { createTransport } from 'nodemailer';
 const cors = require('cors')({
   origin: true
 })
-const gmailEmail = functions.config().gmail.email
-const gmailPassword = functions.config().gmail.password
+const gmailEmail = config().gmail.email
+const gmailPassword = config().gmail.password
 
-const mailTransport = nodemailer.createTransport({
+const mailTransport = createTransport({
   service: 'gmail',
   auth: {
     user: gmailEmail,
@@ -22,7 +22,7 @@ const mailTransport = nodemailer.createTransport({
   },
 })
 
-exports.submit = functions.https.onRequest((req, res) => {
+export const submit = https.onRequest((req, res) => {
   res.set('Access-Control-Allow-Origin', '*')
   res.set('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS')
   res.set('Access-Control-Allow-Headers', '*')
