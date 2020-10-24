@@ -133,7 +133,7 @@ function ContactForm() {
               rows='10'
               cols='30'
               type="message"
-              placeholder="Go ahead, contact me if you have a project in mind!"
+              placeholder="Do you think I can be helpful for your company or personal proyect? Contact me!"
               value={formData.message || ''}
               onChange={updateInput}
             />
