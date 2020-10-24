@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const AboutMe = () => {
+function Page() {
 
     return (
         <div className='lg:container lg:mx-auto'>
@@ -27,5 +27,5 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe;
+export default Page;
 
