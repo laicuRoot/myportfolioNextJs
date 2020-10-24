@@ -1,4 +1,5 @@
 import Nav from '../src/components/Nav/Nav';
+import Head from 'next/head'
 import '../styles/globals.css';
 import { motion } from 'framer-motion';
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -8,6 +9,11 @@ import '@fortawesome/fontawesome-free/js/brands';
 
 function MyApp({ Component, pageProps, router }) {
   return (
+    <>
+    <Head>
+      <title>JB Dev</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={{
       pageInitial: {
         y:60,
@@ -28,6 +34,7 @@ function MyApp({ Component, pageProps, router }) {
       <Nav />
       <Component {...pageProps} />
     </motion.div>
+    </>
 );
 }
 

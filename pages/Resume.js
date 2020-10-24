@@ -21,10 +21,6 @@ export default function Page() {
 
   return (
     <>
-      <Head>
-        <title>Jose Blanco CV</title>
-      </Head>
-
       <Layout>
         <div className='container mx-auto'>
           <NavResume />
