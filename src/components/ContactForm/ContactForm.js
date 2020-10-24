@@ -64,11 +64,11 @@ function ContactForm() {
   // }
 
   return (
-    <div className="container mx-auto m-10 shadow-lg pb-4">
-      <h1 className="sm:text-xl md:text-4xl lg:text-6xl font-bold text-center">Contact Me</h1>
+    <div className="container mx-auto m-10 shadow-lg pb-4 p-2">
+      <h1 className="text-xl md:text-4xl lg:text-6xl font-bold text-center">Contact Me</h1>
       <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit}>
         <div className="flex flex-wrap justify-center -mx-3 mb-6">
-          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="w-full m-1 md:w-1/2 px-3 mb-6 md:mb-0 md:m-0">
             <label className='block uppercase tracking-wide text-black text-xs font-bold mb-2' htmlFor='grid-first-name'>
               First Name:
               </label>
