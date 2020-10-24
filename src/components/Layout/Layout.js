@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
           <hr />
             <main>
                 <div className='flex flex-col items-start px-5 mx-auto w-full'>
-                  <div className='mt-40 m-10'>
+                  <div className='mt-20 lg:mt-40 lg:m-10'>
                 <motion.div initial="hidden" animate="visible" variants={{
                   hidden: {
                     scale: .5,
@@ -32,13 +32,13 @@ export default function Layout({ children, home }) {
                     }
                   },
                 }}>
-                    <h1 className='text-5xl font-bold tracking-tighter leading-tight md:pr-8'> Hello I'm <span className='bg-black text-white m-1 p-2 rounded'>Jose Blanco</span> </h1>
+                    <h1 className='text-sm md:text-4xl font-bold tracking-tighter leading-tight md:pr-8'> Hello I'm <span className='bg-black text-white p-1 rounded text-sm md:text-4xl lg:p-2'>Jose Blanco</span> </h1>
                   </motion.div>
-                    <h4 className='text-6xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8'> Front End Developer.</h4>
-                    <p className='text-xl font-medium p-1 mt-1 mb-1 w-1/2'> I'm a self-taught front-end developer with passion for web development and programming.</p>
+                    <h4 className='text-lg md:text-5xl font-bold tracking-tighter leading-tight mt-1'> Front End Developer.</h4>
+                    <p className='text-sm w-full font-medium p-1 mt-1 mb-1 sm:w-1/2 md:text-xl'> I'm a self-taught front-end developer with passion for web development and programming.</p>
                     <div className='flex items-center w-40'>
                       <Link href='/Resume'>
-                        <button className='bg-black text-white rounded-full py-2 px-4 animate-pulse'>Find out more</button>
+                    <button className='bg-black text-white rounded-full animate-pulse text-xs py-1 px-2 lg:text-lg'>Find out more</button>
                       </Link>
                     </div>
                   </div>

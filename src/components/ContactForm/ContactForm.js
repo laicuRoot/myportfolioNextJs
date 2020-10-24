@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Axios, db } from '../../firebase/firebaseConfig';
+// import { Axios, db } from '../../firebase/firebaseConfig';
 import emailjs from 'emailjs-com';
 
 function ContactForm() {
@@ -15,6 +15,7 @@ function ContactForm() {
 
   const handleSubmit = event => {
     event.preventDefault()
+    // sendEmail()
     sendMessage()
     setFormData({
       firstName: '',
@@ -55,7 +56,6 @@ function ContactForm() {
   //         lastName: formData.lastName,
   //         email: formData.email,
   //         message: formData.message,
-  //         time: new Date(),
   //       })
   //     })
   //     .catch(error => {
@@ -64,8 +64,8 @@ function ContactForm() {
   // }
 
   return (
-    <div className="container mx-auto m-10 shadow-lg">
-      <h1 className="text-6xl font-bold text-center">Contact Me</h1>
+    <div className="container mx-auto m-10 shadow-lg pb-4">
+      <h1 className="sm:text-xl md:text-4xl lg:text-6xl font-bold text-center">Contact Me</h1>
       <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit}>
         <div className="flex flex-wrap justify-center -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -140,7 +140,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <motion.div className=' block rounded-full mb-4 lg:inline-block lg:mt-0 font-bold text-black hover:shadow-md' whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+        <motion.div className=' block rounded-full mb-4 lg:inline-block font-bold text-black hover:shadow-md' whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
           <input className='bg-black text-white rounded-full py-2 px-4' type="submit" />
         </motion.div>
       </form>
