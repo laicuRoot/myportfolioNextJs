@@ -17,7 +17,7 @@ Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <Fragment>
+    <>
     <Head>
       <title>JB Dev</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps, router }) {
       <Nav />
       <Component {...pageProps} />
     </motion.div>
-    </Fragment>
+    </>
 );
 }
 
