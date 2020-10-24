@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Axios, db } from '../../firebase/firebaseConfig';
+import emailjs from 'emailjs-com';
 
 function ContactForm() {
   const [formData, setFormData] = useState({})
@@ -14,7 +15,7 @@ function ContactForm() {
 
   const handleSubmit = event => {
     event.preventDefault()
-    sendEmail()
+    sendMessage()
     setFormData({
       firstName: '',
       lastName: '',
@@ -23,24 +24,44 @@ function ContactForm() {
     })
   };
 
-  const sendEmail = () => {
-    Axios.post(
-      'https://us-central1-nextjsportfoliowebsite.cloudfunctions.net/submit',
-      formData
-    )
-      .then(res => {
-        db.collection('emails').add({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          message: formData.message,
-          time: new Date(),
-        })
-      })
-      .catch(error => {
-        console.log(error)
-      })
+  function sendMessage() {
+    // if (!validateMail()) {
+    //   return;
+    // }
+    const templateParams = {
+      from_name: formData.firstName,
+      last_name: formData.lastName,
+      message: formData.message,
+      email: formData.email
+    }
+
+    emailjs.send("service_laicuRoot", "template_4uwciqm", templateParams, 'user_CItcQLPkfwi7g0kRYJeQB')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (err) => {
+        console.log('FAILED...', err);
+      });
   }
+
+
+  // const sendEmail = () => {
+  //   Axios.post(
+  //     'https://us-central1-nextjsportfoliowebsite.cloudfunctions.net/submit',
+  //     formData
+  //   )
+  //     .then(res => {
+  //       db.collection('emails').add({
+  //         firstName: formData.firstName,
+  //         lastName: formData.lastName,
+  //         email: formData.email,
+  //         message: formData.message,
+  //         time: new Date(),
+  //       })
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
 
   return (
     <div className="container mx-auto m-10 shadow-lg">

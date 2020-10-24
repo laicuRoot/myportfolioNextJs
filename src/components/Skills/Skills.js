@@ -21,7 +21,7 @@ function Skills (){
         My Skills
       </div>
       <div className='container mx-auto w-4/5'>
-        <div className='flex flex-col sm:flex-row'> 
+        <div id='skills' className='flex flex-col sm:flex-row'> 
           <SkillCard 
             title={'JS'} 
             icon={
