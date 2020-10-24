@@ -4,7 +4,7 @@ import Nav from '../src/components/Nav/Nav';
 import Head from 'next/head';
 import '../styles/globals.css';
 
-import * as gtag from 'common/src/lib/gtag';
+import * as gtag from '../lib/gtag';
 
 import { motion } from 'framer-motion';
 import '@fortawesome/fontawesome-free/js/fontawesome';
