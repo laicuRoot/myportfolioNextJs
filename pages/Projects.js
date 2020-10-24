@@ -1,8 +1,8 @@
-import Layout from '../components/Layout/Layout'
+import Layout from '../src/components/Layout/Layout'
 import projects from '../projects';
-import ProjectList from '../components/ProjectList/ProjectList'
+import ProjectList from '../src/components/ProjectList/ProjectList'
 
-export default function Project(){
+export default function Page(){
   return (
     <Layout>
       <ProjectList projects={projects} />

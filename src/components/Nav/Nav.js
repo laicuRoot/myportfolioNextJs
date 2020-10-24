@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import navButtons from '../../buttons';
+import navButtons from '../../../buttons';
 
 
 const NavButton = props => (

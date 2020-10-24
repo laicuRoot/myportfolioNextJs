@@ -1,8 +1,7 @@
 import React , {useState} from "react";
-import { useForm } from "react-hook-form";
-import Layout from '../components/Layout/Layout';
+import Layout from '../src/components/Layout/Layout';
 import { motion } from "framer-motion";
-import { Axios, db} from '../src/firebase/firebaseConfig'
+import { Axios, db} from '../src/firebase/firebaseConfig';
 
 export default function ContactMe() {
   const [formData, setFormData] = useState({})

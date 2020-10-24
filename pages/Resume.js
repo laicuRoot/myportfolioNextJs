@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import Layout from '../components/Layout/Layout';
 import React from 'react';
-import NavResume from '../components/NavResume/NavResume';
-import Skills from '../components/Skills/Skills';
-import Experience from '../components/Experience/Experience';
-import Education from '../components/Education/Education';
+import Head from 'next/head';
+import Layout from '../src/components/Layout/Layout';
+import NavResume from '../src/components/NavResume/NavResume';
+import Skills from '../src/components/Skills/Skills';
+import Experience from '../src/components/Experience/Experience';
+import Education from '../src/components/Education/Education';
 import experiences from '../experience';
 import education from '../education';
 
 
 
-export default function FirstPost() {
+export default function Page() {
 
   // const testData = [
   //   { bgcolor: "#6a1b9a", completed: 100, icon:'fab fa-html5 fa-2x' },

@@ -1,6 +1,6 @@
-import Nav from '../components/Nav/Nav'
-import { motion } from 'framer-motion';
+import Nav from '../src/components/Nav/Nav';
 import '../styles/globals.css';
+import { motion } from 'framer-motion';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
