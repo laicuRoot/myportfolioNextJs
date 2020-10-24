@@ -1,15 +1,23 @@
+import React, { Fragment } from 'react'
+import Router from 'next/router'
 import Nav from '../src/components/Nav/Nav';
-import Head from 'next/head'
+import Head from 'next/head';
 import '../styles/globals.css';
+
+import * as gtag from 'common/src/lib/gtag';
+
 import { motion } from 'framer-motion';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
+// Notice how we track pageview when route is changed
+Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
+
 function MyApp({ Component, pageProps, router }) {
   return (
-    <>
+    <Fragment>
     <Head>
       <title>JB Dev</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -34,7 +42,7 @@ function MyApp({ Component, pageProps, router }) {
       <Nav />
       <Component {...pageProps} />
     </motion.div>
-    </>
+    </Fragment>
 );
 }
 
