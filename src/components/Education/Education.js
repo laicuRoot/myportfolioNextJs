@@ -37,7 +37,7 @@ const Education = ({ titulations }) => {
       <LifeCard key={id} {...title} />)}
   </>) : (<>
     <div id='experience' className='text-center text-lg text-gray-700 uppercase mt-5 lg:text-left'>
-      WORK EXPERIENCE
+      EDUCATION
       </div>
     <div className='flex-row items-center justify-center m-5'>
       {titulations.map((title, id) =>
