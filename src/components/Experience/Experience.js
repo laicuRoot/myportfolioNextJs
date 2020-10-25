@@ -26,11 +26,12 @@ const MobileLifeCard = ({ date, title, description, photo }) => {
 
 const Experience = ({experiences}) => {
 
-  const [width, setWidth] = useState(800);
+  const [width, setWidth] = useState(1240);
   const breakpoint = 800;
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth)
+    console.log('width:' + window.innerWidth)
     window.addEventListener("resize", handleWindowResize);
 
     // Return a function from the effect that removes the event listener
