@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Nav from '../Nav/Nav';
 import {useEffect} from 'react'
 import {motion} from 'framer-motion';
 import { initGA, logPageView } from '../../../lib/gtag'
@@ -25,6 +26,7 @@ export default function Layout({ children, home }) {
 
         {home ? (
           <>
+          <Nav />
           <hr />
             <main>
                 <div className='flex flex-col items-start px-5 mx-auto w-full'>
@@ -58,6 +60,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
+            <Nav />
             <hr />
             {children}
           </>

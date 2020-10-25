@@ -1,6 +1,4 @@
 import React from 'react'
-import Router from 'next/router'
-import Nav from '../src/components/Nav/Nav';
 import Head from 'next/head';
 import '../styles/globals.css';
 
@@ -39,7 +37,6 @@ function MyApp({ Component, pageProps, router }) {
         opacity:0
       }
     }}>
-      <Nav />
       <Component {...pageProps} />
     </motion.div>
     </>
