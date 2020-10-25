@@ -17,7 +17,7 @@ function SkillCard({title, icon}){
 function Skills (){
   return(
     <>
-      <div className='text-lg text-gray-700 uppercase ml-24'>
+      <div className='text-center text-lg text-gray-700 uppercase mt-5 lg:text-left'>
         My Skills
       </div>
       <div className='container mx-auto w-4/5'>
