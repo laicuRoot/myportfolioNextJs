@@ -12,13 +12,6 @@ import education from '../education';
 
 export default function Page() {
 
-  // const testData = [
-  //   { bgcolor: "#6a1b9a", completed: 100, icon:'fab fa-html5 fa-2x' },
-  //   { bgcolor: "#00695c", completed: 100, icon: 'fab fa-css3-alt fa-2x'},
-  //   { bgcolor: "#ef6c00", completed: 90, icon: 'fab fa-js-square fa-2x' },
-  //   { bgcolor: "#ef6c00", completed: 70, icon: 'fab fa-react fa-2x'}
-  // ];
-
   return (
     <>
       <Layout>

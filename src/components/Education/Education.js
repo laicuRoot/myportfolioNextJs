@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import LifeCard from '../LifeCard/LifeCard';
-import MobileLifeCard from '../LifeCard/MobileLifeCard';
+import MobileLifeCard from '../MobileCard/MobileLifeCard';
 
 
 // const Education = ({ titulations }) => {
