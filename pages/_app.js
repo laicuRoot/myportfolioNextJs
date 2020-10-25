@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Router from 'next/router'
 import Nav from '../src/components/Nav/Nav';
 import Head from 'next/head';
 import '../styles/globals.css';
 
-import * as gtag from '../lib/gtag';
+// import * as gtag from '../lib/gtag';
 
 import { motion } from 'framer-motion';
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -13,7 +13,7 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
 // Notice how we track pageview when route is changed
-Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
+// Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
 function MyApp({ Component, pageProps, router }) {
   return (

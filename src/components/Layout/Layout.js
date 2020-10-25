@@ -1,10 +1,21 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import {useEffect} from 'react'
 import {motion} from 'framer-motion';
+import { initGA, logPageView } from '../../../lib/gtag'
 
 export const siteTitle = 'Jose Blanco Portfolio'
 
 export default function Layout({ children, home }) {
+  
+  useEffect(() =>{
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  },[])
+
   return (
     <>
       <Head>
