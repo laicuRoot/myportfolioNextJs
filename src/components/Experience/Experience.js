@@ -2,19 +2,6 @@ import React,{useState} from 'react'
 import LifeCard from '../LifeCard/LifeCard';
 import MobileLifeCard from '../LifeCard/MobileLifeCard';
 
-
-// const Experience = ({experiences}) => {
-//   return(
-//     <>
-//       <div id='experience' className='text-center text-lg text-gray-700 uppercase mt-5 lg:text-left'>
-//         WORK EXPERIENCE
-//       </div>
-//         {experiences.map((experience, id) =>
-//           <LifeCard key={id} {...experience} />)}
-//     </>
-//   )
-// }
-
 const Experience = ({experiences}) => {
 
   const [width, setWidth] = useState(0);
