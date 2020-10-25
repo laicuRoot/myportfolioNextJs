@@ -22,6 +22,7 @@ const Education = ({ titulations }) => {
   const breakpoint = 620;
 
   React.useEffect(() => {
+    console.log(window.innerWidth)
     const handleWindowResize = () => setWidth(window.innerWidth)
     window.addEventListener("resize", handleWindowResize);
 
