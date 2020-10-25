@@ -26,8 +26,8 @@ const MobileLifeCard = ({ date, title, description, photo }) => {
 
 const Experience = ({experiences}) => {
 
-  const [width, setWidth] = useState(0);
-  const breakpoint = 620;
+  const [width, setWidth] = useState(800);
+  const breakpoint = 800;
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth)
