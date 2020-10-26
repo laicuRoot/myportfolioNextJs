@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Nav from '../Nav/Nav';
 import {useEffect} from 'react'
 import {motion} from 'framer-motion';
-import { initGA, logPageView } from '../../../lib/gtag'
+import { initGA, logPageView } from '../../../lib/gtag';
 
 export const siteTitle = 'Jose Blanco Portfolio'
 
