@@ -19,6 +19,25 @@ function MyApp({ Component, pageProps, router }) {
     <Head>
       <title>JB Dev</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-89G480K53Q"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-89G480K53Q"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-89G480K53Q');
+              </script>
+              `,
+          }}
+        />
     </Head>
     <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={{
       pageInitial: {
