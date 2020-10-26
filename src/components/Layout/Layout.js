@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
         <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-163332503-1"
-          ></script>
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
