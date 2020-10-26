@@ -31,7 +31,7 @@ const Experience = ({experiences}) => {
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth)
-    console.log('width:' + window.innerWidth)
+    // console.log('width:' + window.innerWidth)
     window.addEventListener("resize", handleWindowResize);
 
     // Return a function from the effect that removes the event listener
