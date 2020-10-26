@@ -24,7 +24,7 @@ export default function Layout({ children, home }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-163332503-1"
+            src="https://www.googletagmanager.com/gtag/js?id=G-89G480K53Q"
           />
           <script
             dangerouslySetInnerHTML={{
