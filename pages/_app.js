@@ -21,6 +21,9 @@ function MyApp({ Component, pageProps, router }) {
       <Head>
         <title>JB Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta 
+        name="google-site-verification" 
+        content="nBBXhr6l-9Kw9upbO7nTNCoewd4ovCDqLWxNuqmEwps" />
       </Head>
       <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={{
         pageInitial: {
