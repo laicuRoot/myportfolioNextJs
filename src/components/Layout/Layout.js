@@ -1,28 +1,47 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Nav from '../Nav/Nav';
-import {useEffect} from 'react'
+// import {useEffect} from 'react'
 import {motion} from 'framer-motion';
-import { initGA, logPageView } from '../../../lib/gtag';
+// import { initGA, logPageView } from '../../../lib/gtag';
 
 export const siteTitle = 'Jose Blanco Portfolio'
 
 export default function Layout({ children, home }) {
   
-  useEffect(() =>{
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView()
-  },[])
+  // useEffect(() =>{
+  //   if (!window.GA_INITIALIZED) {
+  //     initGA()
+  //     window.GA_INITIALIZED = true
+  //   }
+  //   logPageView()
+  // },[])
 
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.icon" />
-        <meta name={siteTitle} content={siteTitle} />
-      </Head>
+      <title>JB Dev</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-89G480K53Q"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-89G480K53Q"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-89G480K53Q');
+              </script>
+              `,
+          }}
+        />
+    </Head>
 
         {home ? (
           <>
