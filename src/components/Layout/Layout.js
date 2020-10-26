@@ -20,9 +20,28 @@ export default function Layout({ children, home }) {
   return (
     <>
       <Head>
-      <title>JB Dev</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
+        <title>JB Dev</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-163332503-1"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-89G480K53Q"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-89G480K53Q');
+              </script>
+                `,
+            }}
+            />
+        </Head>
 
         {home ? (
           <>
@@ -48,7 +67,7 @@ export default function Layout({ children, home }) {
                     <h1 className='text-left text-xl md:text-4xl font-bold tracking-tighter leading-tight md:pr-8'> Hello I'm <span className='bg-black text-white p-1 rounded text-2xl md:text-4xl lg:p-2'>Jose Blanco</span> </h1>
                   </motion.div>
                     <h4 className='text-left text-3xl md:text-5xl font-bold tracking-tighter leading-tight mt-1'> Front End Developer.</h4>
-                    <p className=' text-left text-lg w-full font-medium p-1 mt-1 mb-2 sm:w-1/2 md:text-xl'> I'm a self-taught front-end developer with passion for web development and programming.</p>
+                    <p className=' text-left text-lg w-full font-medium p-1 mt-1 mb-2 sm:w-1/2 md:text-xl'> I'm a self-taught front-end developer with a passion for web development and programming.</p>
                     <div className='flex items-center w-40'>
                       <Link href='/Resume'>
                     <button className='bg-black text-white rounded-full animate-pulse text-lg py-1 px-2 lg:text-xl'>Find out more</button>
