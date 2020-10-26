@@ -7,7 +7,7 @@ const projects = [
     link:'https://github.com/laicuRoot/Weather-App-React',
   },
   {
-    title: "Yealp App React",
+    title: "Yelp App React",
     photo: "/images/yelpsmall.jpg",
     description: 'Find your favourite restaurant. Built with React and Yelp API',
     link: 'https://github.com/laicuRoot/Weather-App-React',
